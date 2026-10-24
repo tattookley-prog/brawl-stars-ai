@@ -1,0 +1,18 @@
+# Lenovo Legion Y700 (2025): экран 3040x1904, альбомная ориентация.
+# Координаты ПРИБЛИЗИТЕЛЬНЫЕ - уточните через 'Местоположение указателя'
+# (Настройки -> Для разработчиков), коснувшись центров джойстиков в игре.
+model: models/best.onnx
+imgsz: 640
+conf: 0.4
+# Порядок классов - строго как в data.yaml из Roboflow!
+names: [me, enemy, ally, bush, wall, gem]
+
+# Адрес adb. Порт меняется после каждого включения беспроводной отладки.
+# Можно не писать здесь, а передать: python bot/run_tablet.py --device localhost:41234
+device: ""
+
+move_joystick: [420, 1500]
+attack_joystick: [2650, 1500]
+joystick_radius: 200
+attack_range: 600
+loop_delay: 0.02
